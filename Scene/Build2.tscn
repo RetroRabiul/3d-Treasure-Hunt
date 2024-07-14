@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scene/MovingDoor.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.972549, 0.941176, 0.0313726, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.956863, 0.266667, 0.0470588, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.0196078, 0.968627, 0.839216, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.972549, 0.027451, 0.839216, 1 )
+
+[node name="Build2" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 8.94779, 0, 0, 0, 0.0950921, 0, 0, 0, 3.90611, -0.041441, 9.53674e-07, 0 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MovingDoor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.04339, -0.0833409, -0.328324, 0.0822855, 2.0696, -0.0132213, 0.251822, 0, 1.56727, 0.0508072, 2.09382, 0 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="MovingDoor"]
+transform = Transform( 0.224324, 0.0109043, 0.0132712, -0.00914918, 0.27426, -6.17444e-10, -0.0360434, -0.00175206, 0.0825962, -0.763526, 1.76795, 0.312257 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="MovingDoor"]
+transform = Transform( 0.224324, 0.0109043, 0.0132712, -0.00914918, 0.27426, -6.17444e-10, -0.0360434, -0.00175206, 0.0825962, -0.817605, 0.407794, 0.320946 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 5 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="MovingDoor"]
+transform = Transform( 0.224324, 0.0109043, 0.0132712, -0.00914918, 0.27426, -6.17444e-10, -0.0360434, -0.00175206, 0.0825962, -0.0939676, 1.0962, 0.204675 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 6 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="MovingDoor"]
+transform = Transform( 0.224324, 0.0109043, 0.0132712, -0.00914918, 0.27426, -6.17444e-10, -0.0360434, -0.00175206, 0.0825962, -0.24954, -0.217946, 0.229672 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 7 )
