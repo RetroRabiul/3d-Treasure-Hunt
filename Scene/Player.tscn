@@ -17,12 +17,9 @@ shape = SubResource( 3 )
 unique_name_in_owner = true
 transform = Transform( 1, 0, 0, 0, 0.999848, -0.0174524, 0, 0.0174524, 0.999848, 0, 0.697886, 0 )
 
-[node name="SpringArm" type="SpringArm" parent="Head"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.676088, -0.0111854 )
-spring_length = 5.0
-
-[node name="Camera" type="Camera" parent="Head/SpringArm"]
-transform = Transform( 1, 0, 0, 0, 0.976725, 0.214497, 0, -0.214497, 0.976725, 0, 2.94637, 5.35499 )
+[node name="Camera" type="Camera" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 0.976724, 0.214497, 0, -0.214497, 0.976724, -0.0147343, 0.68505, -0.339374 )
+far = 400.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.227273, -0.973831, -0.00108057, 0.0140807, 0.00217666, 0.999898, -0.973729, -0.227265, 0.0142069, 0, 0, 0 )

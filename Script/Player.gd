@@ -3,10 +3,10 @@ extends KinematicBody
 var can_climb = false
 
 
-export var speed = 40
+export var speed = 30
 export var accel = 10
 export var gravity = 50
-export var jump = 15
+export var jump = 40
 
 var look_rotation: Vector3 = Vector3.ZERO
 onready var head: Spatial = $"%Head"
@@ -77,7 +77,7 @@ func _power_up():
 
 func _jump_power():
 	GlobalSignal.emit_signal("power_time")
-	jump = 30
+	jump = 50
 
 
 
@@ -94,9 +94,9 @@ func _input(event):
 		if captured:
 			captured = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	else:
-		captured = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		else:
+			captured = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 	if not captured:
@@ -106,26 +106,6 @@ func _input(event):
 		look_rotation.y -= event.relative.x * sensitivity
 		look_rotation.x -= event.relative.y * sensitivity
 		look_rotation.x = clamp(look_rotation.x, min_angle, max_angle)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

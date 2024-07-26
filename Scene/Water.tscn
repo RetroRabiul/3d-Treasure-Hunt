@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=3]
+noise = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+albedo_color = Color( 0.196078, 0.447059, 0.65098, 0.835294 )
+roughness = 0.27
+roughness_texture = SubResource( 3 )
+
+[sub_resource type="ConcavePolygonShape" id=5]
+data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1 )
+
+[sub_resource type="PlaneMesh" id=6]
+
+[sub_resource type="OpenSimplexNoise" id=7]
+
+[sub_resource type="NoiseTexture" id=8]
+noise = SubResource( 7 )
+
+[sub_resource type="SpatialMaterial" id=9]
+flags_transparent = true
+albedo_color = Color( 0.2, 0.623529, 0.772549, 0.741176 )
+roughness = 0.02
+roughness_texture = SubResource( 8 )
+
+[node name="Water" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
+mesh = SubResource( 1 )
+material/0 = SubResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+mesh = SubResource( 6 )
+material/0 = SubResource( 9 )
