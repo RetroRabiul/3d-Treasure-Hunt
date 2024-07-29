@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Script/Main_scene.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=2]
@@ -14,14 +14,15 @@
 [ext_resource path="res://Scene/Ladder.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Tree.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Building3.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scene/Water.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scene/water2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/swimming tube.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scene/Water.tscn" type="PackedScene" id=17]
 
 [node name="Main_scene" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 183.599, 3.31211, 291.9 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.401, 3.31211, 291.9 )
 
 [node name="Ui" parent="Player" instance=ExtResource( 6 )]
 
@@ -32,7 +33,7 @@ transform = Transform( -4.37114e-08, 0.576504, -0.817095, 0, 0.817095, 0.576504,
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.9124, 1.69562, 372.066 )
 
 [node name="Jump_power" parent="." instance=ExtResource( 10 )]
-transform = Transform( -3.97972e-08, 0, -0.754828, 0, 2.13664, 0, 0.910455, 0, -3.29946e-08, 140.279, -0.100732, 288.168 )
+transform = Transform( -3.97972e-08, 0, -0.754828, 0, 2.13664, 0, 0.910455, 0, -3.29946e-08, -50.721, -0.100732, 291.168 )
 
 [node name="key" parent="." instance=ExtResource( 11 )]
 transform = Transform( -1.74652e-07, 0, -3.01551, 0, 3.29599, 0, 3.99558, 0, -1.31812e-07, 14.03, 2.14349, 406.611 )
@@ -305,5 +306,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0.067, 315.857 )
 [node name="swimming tube2" parent="." instance=ExtResource( 16 )]
 transform = Transform( 0.963532, -0.267592, 0, 0.267592, 0.963532, 0, 0, 0, 1, 47.799, 0.304, 316.129 )
 
-[node name="Water" parent="." instance=ExtResource( 15 )]
-transform = Transform( 5.4, 0, 0, 0, 5.4, 0, 0, 0, 5.4, 0, 0.53, 276 )
+[node name="water" parent="." instance=ExtResource( 15 )]
+transform = Transform( 7.9, 0, 0, 0, 7.9, 0, 0, 0, 7.9, 0, -2, 284 )
+visible = false
+
+[node name="Water" parent="." instance=ExtResource( 17 )]
+transform = Transform( 4.8, 0, 0, 0, 4.8, 0, 0, 0, 4.8, 0, 0.5, 312 )

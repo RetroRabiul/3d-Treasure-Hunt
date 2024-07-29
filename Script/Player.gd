@@ -6,7 +6,7 @@ var can_climb = false
 export var speed = 30
 export var accel = 10
 export var gravity = 50
-export var jump = 40
+export var jump = 30
 
 var look_rotation: Vector3 = Vector3.ZERO
 onready var head: Spatial = $"%Head"
@@ -31,10 +31,7 @@ func _ready():
 	GlobalSignal.connect("jump_power" , self, "_jump_power")
 	GlobalSignal.connect("power_time" , self, "_power_time")
 	GlobalSignal.connect("climbing" , self, "_climbing")
-	GlobalSignal.connect("reset_jump" , self, "C")
-
-
-
+	GlobalSignal.connect("reset_jump" , self, "_reset_jump")
 
 func _physics_process(delta):
 	head.rotation_degrees.x = look_rotation.x
@@ -78,13 +75,11 @@ func _power_up():
 func _jump_power():
 	GlobalSignal.emit_signal("power_time")
 	jump = 50
+	$jumpTimer.start()
 
 
-
-
-
-func reset_jump():
-	jump = 15
+func _reset_jump():
+	jump = 30
 
 
 
@@ -107,9 +102,5 @@ func _input(event):
 		look_rotation.x -= event.relative.y * sensitivity
 		look_rotation.x = clamp(look_rotation.x, min_angle, max_angle)
 
-
-
-
-
-
-
+func _on_jumpTimer_timeout():
+	GlobalSignal.emit_signal("reset_jump")

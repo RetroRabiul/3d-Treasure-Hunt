@@ -154,7 +154,7 @@ material/0 = SubResource( 8 )
 shape = SubResource( 16 )
 
 [node name="island3" type="MeshInstance" parent="."]
-transform = Transform( 17.4912, 0, 0, 0, 0.25, 0, 0, 0, 26.2917, 51.0047, 0, 7.24738 )
+transform = Transform( 17.4912, 0, 0, 0, 0.25, 0, 0, 0, 26.2917, 49.9135, 0, 6.59001 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 9 )
 
@@ -171,6 +171,7 @@ material/0 = SubResource( 10 )
 [node name="StaticBody" type="StaticBody" parent="island2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="island2/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0189719, 0, 0 )
 shape = SubResource( 17 )
 
 [node name="smallPath1" type="MeshInstance" parent="."]
@@ -184,7 +185,7 @@ material/0 = SubResource( 11 )
 shape = SubResource( 18 )
 
 [node name="smallPath2" type="MeshInstance" parent="."]
-transform = Transform( 3.82525, 0, 0, 0, 0.25, 0, 0, 0, 3.42773, -17.764, 0, 58.8202 )
+transform = Transform( 3.82525, 0, 0, 0, 0.25, 0, 0, 0, 3.42773, -17.764, -0.093178, 58.8202 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 12 )
 
@@ -193,8 +194,18 @@ material/0 = SubResource( 12 )
 [node name="CollisionShape" type="CollisionShape" parent="smallPath2/StaticBody"]
 shape = SubResource( 19 )
 
+[node name="smallPath6" type="MeshInstance" parent="."]
+transform = Transform( 3.24831, 0, -1.81023, 0, 0.25, 0, 2.02016, 0, 2.91074, 21.9264, -0.093178, 30.103 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody" type="StaticBody" parent="smallPath6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="smallPath6/StaticBody"]
+shape = SubResource( 19 )
+
 [node name="smallPath3" type="MeshInstance" parent="."]
-transform = Transform( 2.10454, 0, 0, 0, 0.25, 0, 0, 0, 2.50286, -11.5305, 0, 63.871 )
+transform = Transform( 2.10454, 0, 0, 0, 0.25, 0, 0, 0, 2.50286, -11.5305, -0.093178, 63.871 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 13 )
 
@@ -203,8 +214,18 @@ material/0 = SubResource( 13 )
 [node name="CollisionShape" type="CollisionShape" parent="smallPath3/StaticBody"]
 shape = SubResource( 20 )
 
+[node name="smallPath5" type="MeshInstance" parent="."]
+transform = Transform( 1.7022, 0, -1.47182, 0, 0.25, 0, 1.23758, 0, 2.02437, -29.8868, -0.093178, 23.556 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 13 )
+
+[node name="StaticBody" type="StaticBody" parent="smallPath5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="smallPath5/StaticBody"]
+shape = SubResource( 20 )
+
 [node name="smallPath4" type="MeshInstance" parent="."]
-transform = Transform( 2.21026, 0, 0, 0, 0.25, 0, 0, 0, 2.21026, -16.3338, 0, 65.1122 )
+transform = Transform( 2.21026, 0, 0, 0, 0.25, 0, 0, 0, 2.21026, -16.3338, -0.093178, 65.1122 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 14 )
 

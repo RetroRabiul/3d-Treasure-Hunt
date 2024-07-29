@@ -24,3 +24,8 @@ far = 400.0
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.227273, -0.973831, -0.00108057, 0.0140807, 0.00217666, 0.999898, -0.973729, -0.227265, 0.0142069, 0, 0, 0 )
 mesh = SubResource( 2 )
+
+[node name="jumpTimer" type="Timer" parent="."]
+wait_time = 30.0
+
+[connection signal="timeout" from="jumpTimer" to="." method="_on_jumpTimer_timeout"]
