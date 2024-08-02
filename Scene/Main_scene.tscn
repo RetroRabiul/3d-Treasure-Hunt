@@ -311,4 +311,5 @@ transform = Transform( 7.9, 0, 0, 0, 7.9, 0, 0, 0, 7.9, 0, -2, 284 )
 visible = false
 
 [node name="Water" parent="." instance=ExtResource( 17 )]
-transform = Transform( 4.8, 0, 0, 0, 4.8, 0, 0, 0, 4.8, 0, 0.5, 312 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055, 312 )
+visible = false
