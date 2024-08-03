@@ -1,6 +1,8 @@
 extends Control
 
 var score_count = 0
+ 
+var Speed_Time = 30
 
 var Power_time = 30
 
@@ -11,12 +13,21 @@ func _ready():
 	GlobalSignal.connect("locked_door" , self, "_locked_door")
 	GlobalSignal.connect("climbing" , self, "_climbing")
 	GlobalSignal.connect("power_time" , self, "_power_time")
+	GlobalSignal.connect("speed" , self, "_speed")
 	$KeyLabel.text = "Keys: "+str(GlobalVars.key_count)
 	
 
 
+
+func _speed():
+	$speed_timer.start()
+	$speed_label.text = "Speed_Time : "+str(Speed_Time)
+
+
+
 func _process(delta):
 	$Jump_Label.text = "J.P.T : "+str(Power_time)
+	$speed_label.text = "Speed_Time : "+str(Speed_Time)
 
 func _locked_door():
 	$"%UseLabel".text = "LOCKED"
@@ -62,3 +73,9 @@ func _on_Jump_Timer_timeout():
 	if Power_time == 0:
 		GlobalSignal.emit_signal("reset_jump")
 		$Jump_Timer.stop()
+
+
+func _on_speed_timer_timeout():
+	Speed_Time -= 1
+	if Speed_Time == 0:
+		$speed_timer.stop()

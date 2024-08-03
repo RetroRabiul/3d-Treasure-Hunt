@@ -17,3 +17,5 @@ signal locked_door()
 signal collected_key(count)
 
 signal climbing(state)
+
+signal speed()

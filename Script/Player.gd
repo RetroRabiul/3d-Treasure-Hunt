@@ -33,6 +33,10 @@ func _ready():
 	GlobalSignal.connect("climbing" , self, "_climbing")
 	GlobalSignal.connect("reset_jump" , self, "_reset_jump")
 
+	
+
+
+
 func _physics_process(delta):
 	head.rotation_degrees.x = look_rotation.x
 	rotation_degrees.y = look_rotation.y
@@ -44,7 +48,8 @@ func _physics_process(delta):
 			velocity.y = -jump
 	else:
 		velocity.y -= gravity * delta
-	
+
+
 
 
 	if not is_on_floor():
@@ -71,6 +76,7 @@ func _climbing(state):
 
 func _power_up():
 	speed = 70
+	GlobalSignal.emit_signal("speed")
 
 func _jump_power():
 	GlobalSignal.emit_signal("power_time")
