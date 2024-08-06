@@ -78,4 +78,5 @@ func _on_Jump_Timer_timeout():
 func _on_speed_timer_timeout():
 	Speed_Time -= 1
 	if Speed_Time == 0:
+		$time_end.play()
 		$speed_timer.stop()

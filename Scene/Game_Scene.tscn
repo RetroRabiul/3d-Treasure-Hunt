@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/greenland.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/ltlHouse.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Building2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Water.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Building3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/rock.tscn" type="PackedScene" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1044, 10, 566 )
+
+[node name="Game_Scene" type="Spatial"]
+
+[node name="greenland" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 327, 57, 54 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 243, 477 )
+
+[node name="LtlHouse" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.34884, 0, 2.47554, 0, 2.5, 0, -2.47554, 0, 0.34884, 473, 23, 88 )
+
+[node name="LtlHouse2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.303764, 0, -2.48148, 0, 2.5, 0, 2.48148, 0, 0.303764, 391, 32, 20 )
+
+[node name="Building2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -8.30517e-07, 0, -19, 0, 19, 0, 19, 0, -8.30517e-07, 314, 58, 50 )
+
+[node name="Water" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-07, 0, 10, 0, 1, 0, -10, 0, -4.37114e-07, -63, -93, 0 )
+
+[node name="Building3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 28.2744, 0, 0, 0, 28.2744, 0, 0, 0, 28.2744, -215, 42.855, 29 )
+
+[node name="Restart" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Restart"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83, 0, 55 )
+shape = SubResource( 1 )
+
+[node name="Rocks" type="Spatial" parent="."]
+
+[node name="rock" parent="Rocks" instance=ExtResource( 7 )]
+transform = Transform( 2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 388, 85, 305 )
+
+[node name="rock2" parent="Rocks" instance=ExtResource( 7 )]
+transform = Transform( -2.59808, 0, -1.5, 0, 3, 0, 1.5, 0, -2.59808, 361, 85, 316 )
+
+[node name="rock3" parent="Rocks" instance=ExtResource( 7 )]
+transform = Transform( -1.73205, 0, -1, 0, 2, 0, 1, 0, -1.73205, 217, 20, -53 )
+
+[node name="rock4" parent="Rocks" instance=ExtResource( 7 )]
+transform = Transform( -1.73205, 0, -1, 0.707107, 1.41421, -1.22474, 0.707107, -1.41421, -1.22474, 184, 21, 113 )
+
+[connection signal="body_entered" from="Restart" to="Player" method="_on_Restart_body_entered"]

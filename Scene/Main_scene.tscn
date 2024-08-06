@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Script/Main_scene.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=2]
@@ -14,10 +14,8 @@
 [ext_resource path="res://Scene/Ladder.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Tree.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Building3.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scene/water2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/swimming tube.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scene/Water.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Assets/glb/building.glb" type="PackedScene" id=18]
+[ext_resource path="res://Scene/house2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/brize.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scene/boat 2.tscn" type="PackedScene" id=20]
 
@@ -25,7 +23,7 @@
 script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 528.599, 4.31211, 491.9 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 527.599, 4.31211, 491.9 )
 
 [node name="Ui" parent="Player" instance=ExtResource( 6 )]
 
@@ -288,45 +286,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0.067, 315.857 )
 [node name="swimming tube2" parent="." instance=ExtResource( 16 )]
 transform = Transform( 0.963532, -0.267592, 0, 0.267592, 0.963532, 0, 0, 0, 1, 47.799, 0.304, 316.129 )
 
-[node name="water" parent="." instance=ExtResource( 15 )]
-transform = Transform( 33.18, 0, 0, 0, 10.665, 0, 0, 0, 26.544, 0, -2, 284 )
-visible = false
-
-[node name="Water" parent="." instance=ExtResource( 17 )]
-transform = Transform( 27.3, 0, 0, 0, 1, 0, 0, 0, 16.8, 0, -22.945, 415 )
-
 [node name="rocks" type="Spatial" parent="."]
 transform = Transform( 2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 12, 0, -387.4 )
 
 [node name="rock" parent="rocks" instance=ExtResource( 9 )]
 transform = Transform( -2.91707e-07, 6.67348, 0, 0.284576, 1.24392e-08, 6.66741, 6.66741, 2.91442e-07, -0.284576, 245.339, -9.53413, 288.389 )
 
-[node name="rock2" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -1.58487, 6.48222, 0.0654324, 3.56563, 0.815434, 5.58182, 5.41385, 1.36057, -3.65709, 240.172, 6.14883, 316.208 )
-
-[node name="rock3" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -0.429218, 6.65963, 0.0183197, 0.284576, 1.24392e-08, 6.66741, 6.65358, 0.429609, -0.283986, 245.339, -9.53413, 346.103 )
-
-[node name="rock4" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -1.55036, -1.67675, -6.27058, -0.975372, 6.43395, -1.47928, 6.41719, 0.572826, -1.73978, 260.388, -1.01421, 372.066 )
-
-[node name="rock5" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -3.96022, 5.36874, 0.169029, 0.284576, 1.24392e-08, 6.66741, 5.36386, 3.96382, -0.228939, 212.912, -9.53413, 383.518 )
-
-[node name="rock6" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -5.93758, 3.03582, 0.253426, 0.284576, 1.24392e-08, 6.66741, 3.03306, 5.94299, -0.129456, 185.055, -9.53413, 383.518 )
-
-[node name="rock7" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -6.48823, 1.5367, 0.276929, 0.284576, 1.24392e-08, 6.66741, 1.53531, 6.49414, -0.0655295, 163.407, -9.53413, 383.518 )
-
-[node name="rock8" parent="rocks" instance=ExtResource( 9 )]
-transform = Transform( -6.6648, 0.186566, 0.284465, 0.284576, 1.24392e-08, 6.66741, 0.186398, 6.67087, -0.00795576, 134.033, -9.53413, 383.518 )
-
-[node name="building" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -224.18, 4, 261.332 )
-
 [node name="brize" parent="." instance=ExtResource( 19 )]
 transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 142, -2, 474 )
 
 [node name="boat 2" parent="." instance=ExtResource( 20 )]
 transform = Transform( -1.70355, 0, -1.04782, 0, 2, 0, 1.04782, 0, -1.70355, 257.079, 0, 345 )
+
+[node name="brize2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 180, 1, 145 )
+
+[node name="house2" parent="." instance=ExtResource( 18 )]
+transform = Transform( 0.965926, 0, -0.336465, 0, 1.54, 0, 0.258819, 0, 1.2557, 0, 7, 106 )

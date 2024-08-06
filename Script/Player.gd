@@ -56,6 +56,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 		
 	if Input.is_action_just_pressed("jump") && is_on_floor():
+		$jump_sound.play()
 		velocity.y = jump
 
 
@@ -64,7 +65,7 @@ func _physics_process(delta):
 	
 	velocity.x = lerp(velocity.x, move_dir.x * speed, accel * delta)
 	velocity.z = lerp(velocity.z, move_dir.z * speed, accel * delta)
-
+	
 	velocity = move_and_slide(velocity, Vector3.UP)
 
 func _climbing(state):
@@ -75,11 +76,13 @@ func _climbing(state):
 
 
 func _power_up():
-	speed = 70
+	speed = 50
+	$speed_power.play()
 	GlobalSignal.emit_signal("speed")
 
 func _jump_power():
 	GlobalSignal.emit_signal("power_time")
+	$jump_power.play()
 	jump = 50
 	$jumpTimer.start()
 
@@ -107,6 +110,13 @@ func _input(event):
 		look_rotation.y -= event.relative.x * sensitivity
 		look_rotation.x -= event.relative.y * sensitivity
 		look_rotation.x = clamp(look_rotation.x, min_angle, max_angle)
+		
 
 func _on_jumpTimer_timeout():
 	GlobalSignal.emit_signal("reset_jump")
+	$time_end.play()
+
+
+func _on_Restart_body_entered(body):
+	if body.is_in_group("player"):
+		get_tree().change_scene("res://Scene/Game_Scene.tscn")
