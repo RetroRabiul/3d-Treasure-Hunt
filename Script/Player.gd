@@ -29,15 +29,13 @@ func _ready():
 	captured = true
 	GlobalSignal.connect("power_up" , self, "_power_up")
 	GlobalSignal.connect("jump_power" , self, "_jump_power")
-	GlobalSignal.connect("power_time" , self, "_power_time")
 	GlobalSignal.connect("climbing" , self, "_climbing")
 	GlobalSignal.connect("reset_jump" , self, "_reset_jump")
 
-	
-
-
 
 func _physics_process(delta):
+	
+	
 	head.rotation_degrees.x = look_rotation.x
 	rotation_degrees.y = look_rotation.y
 	if can_climb:
@@ -68,6 +66,7 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
 
+
 func _climbing(state):
 	#if state:
 		
@@ -91,9 +90,14 @@ func _reset_jump():
 	jump = 30
 
 
-
-
 func _input(event):
+	
+	if Input.is_action_pressed("use"):
+		if GlobalVars.key_collected:
+			print("key_collected")
+			GlobalSignal.emit_signal("use_treasure")
+	
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 		if captured:
 			captured = false

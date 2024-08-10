@@ -10,12 +10,7 @@ func _ready():
 
 
 
-
-func _on_Area_body_entered(body):
+func _on_Collectkey_body_entered(body):
 	if body.is_in_group("player"):
-		GlobalSignal.emit_signal("collected_key" ,1)
+		GlobalVars.key_collected = true
 		queue_free()
-
-
-
-

@@ -4,8 +4,6 @@ signal power_time()
 
 signal reset_jump()
 
-signal change_score()
-
 signal can_use(state)
 
 signal power_up()
@@ -19,3 +17,10 @@ signal collected_key(count)
 signal climbing(state)
 
 signal speed()
+
+signal sign_text(text)
+signal sign_hide()
+
+signal use_treasure()
+
+

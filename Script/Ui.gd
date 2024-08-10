@@ -7,15 +7,24 @@ var Speed_Time = 30
 var Power_time = 30
 
 func _ready():
-	GlobalSignal.connect("change_score" , self, "_change_score")
 	GlobalSignal.connect("can_use" , self, "_can_use")
 	GlobalSignal.connect("collected_key" , self, "_collected_key")
 	GlobalSignal.connect("locked_door" , self, "_locked_door")
 	GlobalSignal.connect("climbing" , self, "_climbing")
 	GlobalSignal.connect("power_time" , self, "_power_time")
 	GlobalSignal.connect("speed" , self, "_speed")
-	$KeyLabel.text = "Keys: "+str(GlobalVars.key_count)
+	GlobalSignal.connect("sign_text", self, "_sign_text")
+	GlobalSignal.connect("sign_hide", self, "_sign_hide")
+
 	
+
+
+func _sign_hide():
+	$sign_text.visible = false
+
+func _sign_text(text):
+	$sign_text.text = ""+str(text)
+	$sign_text.visible = true
 
 
 
@@ -41,7 +50,6 @@ func _power_time():
 
 func _collected_key(count):
 	GlobalVars.key_count += count
-	$KeyLabel.text = "Key : "+str(GlobalVars.key_count)
 
 
 func _can_use(state):
@@ -57,14 +65,6 @@ func _climbing(state):
 		$"%UseLabel".visible = true
 	else:
 		$"%UseLabel".visible = false
-
-
-
-
-func _change_score():
-	score_count =+ 1
-	$ScoreLable.text = "Score :" +str(score_count)
-
 
 
 
