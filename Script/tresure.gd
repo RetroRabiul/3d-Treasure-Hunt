@@ -3,13 +3,15 @@ extends Spatial
 var player_near = false
 
 func _ready():
-	
+	$Lock.visible = true
 	GlobalSignal.connect("use_treasure", self, "_use_treasure")
 
 func _use_treasure():
 	if player_near:
 		print("teasure_opened")
 		$AnimationPlayer.play("open")
+		$Lock.visible = false
+		GlobalVars.tresure_opened = true
 
 
 func _on_Area_body_entered(body):

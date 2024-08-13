@@ -11,28 +11,17 @@ func _ready():
 
 func _use_door():
 	if door_closed:
-		$"%DoorAnim".play("Open")
+		$"%DoorAnim".play("open")
 		door_closed = false
 	else:
-		$"%DoorAnim".play("Close")
+		$"%DoorAnim".play("close")
 		door_closed = true
 
 
 func _input(event):
 	if event.is_action_pressed("use"):
 		if player_near:
-			if locked:
-				_check_keys()
-			else:
-				_use_door()
-
-func _check_keys():
-	if GlobalVars.key_count > 0:
-		locked = false
-		GlobalSignal.emit_signal("collected_key" ,-1)
-		_use_door()
-	else:
-		GlobalSignal.emit_signal("locked_door")
+			_use_door()
 
 
 

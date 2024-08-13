@@ -55,6 +55,7 @@ text = "Speed_Time:"
 stream = ExtResource( 3 )
 
 [node name="sign_text" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 margin_left = 336.0
 margin_top = 95.0

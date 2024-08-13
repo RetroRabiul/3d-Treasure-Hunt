@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/greenland.tscn" type="PackedScene" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://Scene/house2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/brize.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scene/2ndHome.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scene/Ladder.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scene/door.tscn" type="PackedScene" id=22]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1044, 10, 566 )
@@ -1769,5 +1771,14 @@ transform = Transform( -4.37114e-07, 0, -10, 0, 10, 0, 10, 0, -4.37114e-07, -801
 
 [node name="tresure_chest" parent="." instance=ExtResource( 8 )]
 transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 317.513, 51.717, 45.012 )
+
+[node name="Ladder" parent="." instance=ExtResource( 21 )]
+transform = Transform( 2.5, 0, 0, 0, 5.835, 0, 0, 0, 2.5, -695, 33.641, 209 )
+
+[node name="Ladder2" parent="." instance=ExtResource( 21 )]
+transform = Transform( 2.5, 0, 0, 0, 5.835, 0, 0, 0, 2.5, -695, 62.641, 209 )
+
+[node name="Door" parent="." instance=ExtResource( 22 )]
+transform = Transform( -3.886, 0, -3.01539e-07, 0, 2.285, 0, 5.8677e-07, 0, -1.997, -767.643, 27.447, 200 )
 
 [connection signal="body_entered" from="Restart" to="Player" method="_on_Restart_body_entered"]

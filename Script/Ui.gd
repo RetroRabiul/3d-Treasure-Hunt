@@ -21,11 +21,11 @@ func _ready():
 
 
 func _sign_hide():
-	$sign_text.visible = false
+	$"%sign_text".visible = false
 
 func _sign_text(text):
-	$sign_text.text = ""+str(text)
-	$sign_text.visible = true
+	$"%sign_text".text = ""+str(text)
+	$"%sign_text".visible = true
 
 
 func _speed():
@@ -39,8 +39,8 @@ func _process(delta):
 	$TimeLable.text = "Time : " + str (time)
 
 func _locked_door():
-	$"%UseLabel".text = "LOCKED"
-	$"%UseLabel".visible = true 
+	$"%sign_text".text = "LOCKED"
+	$"%sign_text".visible = true 
 	
 func _power_time():
 	$Jump_Timer.start()
@@ -54,17 +54,17 @@ func _collected_key(count):
 
 func _can_use(state):
 	if state:
-		$"%UseLabel".text = "press e"
-		$"%UseLabel".visible = true
+		$"%sign_text".text = "press e"
+		$"%sign_text".visible = true
 	else:
-		$"%UseLabel".visible = false
+		$"%sign_text".visible = false
 
 func _climbing(state):
 	if state:
-		$"%UseLabel".text = "x to climb up / z to climb up"
-		$"%UseLabel".visible = true
+		$"%sign_text".text = "x to climb up / z to climb down"
+		$"%sign_text".visible = true
 	else:
-		$"%UseLabel".visible = false
+		$"%sign_text".visible = false
 
 
 
@@ -83,4 +83,5 @@ func _on_speed_timer_timeout():
 
 
 func _on_Timer_timeout():
-	time += 1
+	if GlobalVars.tresure_opened == false:
+		time += 1

@@ -41,9 +41,9 @@ func _physics_process(delta):
 	if can_climb:
 		velocity.y = 0
 		if Input.is_action_pressed("climb_down"):
-			velocity.y = jump
-		elif Input.is_action_pressed("climb_up"):
 			velocity.y = -jump
+		elif Input.is_action_pressed("climb_up"):
+			velocity.y = jump
 	else:
 		velocity.y -= gravity * delta
 
