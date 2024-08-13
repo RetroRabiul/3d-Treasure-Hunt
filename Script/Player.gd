@@ -47,9 +47,6 @@ func _physics_process(delta):
 	else:
 		velocity.y -= gravity * delta
 
-
-
-
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		
@@ -65,6 +62,16 @@ func _physics_process(delta):
 	velocity.z = lerp(velocity.z, move_dir.z * speed, accel * delta)
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+	
+	_walking_sound()
+
+
+func _walking_sound():
+	if abs(velocity.x + velocity.z) > 10.0: 
+		if not $walking.playing:
+			$walking.play()
+	else:
+		$walking.stop()
 
 
 func _climbing(state):

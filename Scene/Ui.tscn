@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Ui.gd" type="Script" id=1]
 [ext_resource path="res://font/Comfortaa-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Audio/Random.wav" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
@@ -21,10 +24,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="ScoreLable" type="Label" parent="."]
+[node name="TimeLable" type="Label" parent="."]
 margin_bottom = 14.0
 rect_scale = Vector2( 3, 3 )
-text = "Score:"
+custom_fonts/font = SubResource( 5 )
+text = "Time : "
 
 [node name="Jump_Timer" type="Timer" parent="."]
 one_shot = true
@@ -61,5 +65,9 @@ text = "Sign text here"
 align = 1
 valign = 1
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="Jump_Timer" to="." method="_on_Jump_Timer_timeout"]
 [connection signal="timeout" from="speed_timer" to="." method="_on_speed_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=304 format=2]
+[gd_scene load_steps=306 format=2]
 
 [ext_resource path="res://Assets/glb/Material_006.material" type="Material" id=1]
 [ext_resource path="res://Assets/glb/Material_004.material" type="Material" id=2]
 [ext_resource path="res://Assets/glb/Material_003.material" type="Material" id=3]
+[ext_resource path="res://Assets/Material_017.material" type="Material" id=4]
+[ext_resource path="res://Assets/Material_014.material" type="Material" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "brize_Cube222"
@@ -496,7 +498,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -1143,6 +1144,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
+"material": ExtResource( 6 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -1432,6 +1434,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -1449,7 +1452,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -2043,7 +2046,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 2196,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 1464
@@ -2637,7 +2640,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 186,
-"material": ExtResource( 1 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 128
@@ -2647,6 +2650,7 @@ surfaces/0 = {
 data = PoolVector3Array( 0, -1, -1, 0.1951, -1, -0.9808, 0, 1, 0, 0.1951, -1, -0.9808, 0.3827, -1, -0.9239, 0, 1, 0, 0.3827, -1, -0.9239, 0.5556, -1, -0.8315, 0, 1, 0, 0.5556, -1, -0.8315, 0.7071, -1, -0.7071, 0, 1, 0, 0.7071, -1, -0.7071, 0.8315, -1, -0.5556, 0, 1, 0, 0.8315, -1, -0.5556, 0.9239, -1, -0.3827, 0, 1, 0, 0.9239, -1, -0.3827, 0.9808, -1, -0.1951, 0, 1, 0, 0.9808, -1, -0.1951, 1, -1, 0, 0, 1, 0, 1, -1, 0, 0.9808, -1, 0.1951, 0, 1, 0, 0.9808, -1, 0.1951, 0.9239, -1, 0.3827, 0, 1, 0, 0.9239, -1, 0.3827, 0.8315, -1, 0.5556, 0, 1, 0, 0.8315, -1, 0.5556, 0.7071, -1, 0.7071, 0, 1, 0, 0.7071, -1, 0.7071, 0.5556, -1, 0.8315, 0, 1, 0, 0.5556, -1, 0.8315, 0.3827, -1, 0.9239, 0, 1, 0, 0.3827, -1, 0.9239, 0.1951, -1, 0.9808, 0, 1, 0, 0.1951, -1, 0.9808, 0, -1, 1, 0, 1, 0, 0, -1, 1, -0.1951, -1, 0.9808, 0, 1, 0, -0.1951, -1, 0.9808, -0.3827, -1, 0.9239, 0, 1, 0, -0.3827, -1, 0.9239, -0.5556, -1, 0.8315, 0, 1, 0, -0.5556, -1, 0.8315, -0.7071, -1, 0.7071, 0, 1, 0, -0.7071, -1, 0.7071, -0.8315, -1, 0.5556, 0, 1, 0, -0.8315, -1, 0.5556, -0.9239, -1, 0.3827, 0, 1, 0, -0.9239, -1, 0.3827, -0.9808, -1, 0.1951, 0, 1, 0, -0.9808, -1, 0.1951, -1, -1, 0, 0, 1, 0, -1, -1, 0, -0.9808, -1, -0.1951, 0, 1, 0, -0.9808, -1, -0.1951, -0.9239, -1, -0.3827, 0, 1, 0, -0.9239, -1, -0.3827, -0.8315, -1, -0.5556, 0, 1, 0, -0.8315, -1, -0.5556, -0.7071, -1, -0.7071, 0, 1, 0, -0.7071, -1, -0.7071, -0.5556, -1, -0.8315, 0, 1, 0, -0.5556, -1, -0.8315, -0.3827, -1, -0.9239, 0, 1, 0, -0.3827, -1, -0.9239, -0.1951, -1, -0.9808, 0, 1, 0, -0.1951, -1, -0.9808, 0, -1, -1, 0, 1, 0, -0.1175, -0.2451, -0.5908, 0.1175, -0.2451, -0.5908, 0, -0.2451, -0.6023, 0.1175, -0.2451, -0.5908, 0.3346, -0.2451, -0.5008, 0.2305, -0.2451, -0.5565, 0.3346, -0.2451, -0.5008, 0.5008, -0.2451, -0.3346, 0.4259, -0.2451, -0.4259, 0.5008, -0.2451, -0.3346, 0.5908, -0.2451, -0.1175, 0.5565, -0.2451, -0.2305, 0.5908, -0.2451, -0.1175, 0.5908, -0.2451, 0.1175, 0.6023, -0.2451, 0, 0.5908, -0.2451, 0.1175, 0.5008, -0.2451, 0.3346, 0.5565, -0.2451, 0.2305, 0.5008, -0.2451, 0.3346, 0.3346, -0.2451, 0.5008, 0.4259, -0.2451, 0.4259, 0.3346, -0.2451, 0.5008, 0.1175, -0.2451, 0.5908, 0.2305, -0.2451, 0.5565, 0.1175, -0.2451, 0.5908, -0.1175, -0.2451, 0.5908, 0, -0.2451, 0.6023, -0.1175, -0.2451, 0.5908, -0.3346, -0.2451, 0.5008, -0.2305, -0.2451, 0.5565, -0.3346, -0.2451, 0.5008, -0.5008, -0.2451, 0.3346, -0.4259, -0.2451, 0.4259, -0.5008, -0.2451, 0.3346, -0.5908, -0.2451, 0.1175, -0.5565, -0.2451, 0.2305, -0.5908, -0.2451, 0.1175, -0.5908, -0.2451, -0.1175, -0.6023, -0.2451, 0, -0.5908, -0.2451, -0.1175, -0.5008, -0.2451, -0.3346, -0.5565, -0.2451, -0.2305, -0.5008, -0.2451, -0.3346, -0.3346, -0.2451, -0.5008, -0.4259, -0.2451, -0.4259, -0.3346, -0.2451, -0.5008, -0.1175, -0.2451, -0.5908, -0.2305, -0.2451, -0.5565, -0.1175, -0.2451, -0.5908, 0.3346, -0.2451, -0.5008, 0.1175, -0.2451, -0.5908, 0.3346, -0.2451, -0.5008, 0.5908, -0.2451, -0.1175, 0.5008, -0.2451, -0.3346, 0.5908, -0.2451, -0.1175, 0.5008, -0.2451, 0.3346, 0.5908, -0.2451, 0.1175, 0.5008, -0.2451, 0.3346, 0.1175, -0.2451, 0.5908, 0.3346, -0.2451, 0.5008, 0.1175, -0.2451, 0.5908, -0.3346, -0.2451, 0.5008, -0.1175, -0.2451, 0.5908, -0.3346, -0.2451, 0.5008, -0.5908, -0.2451, 0.1175, -0.5008, -0.2451, 0.3346, -0.5908, -0.2451, 0.1175, -0.5008, -0.2451, -0.3346, -0.5908, -0.2451, -0.1175, -0.5008, -0.2451, -0.3346, -0.1175, -0.2451, -0.5908, -0.3346, -0.2451, -0.5008, -0.1175, -0.2451, -0.5908, 0.5908, -0.2451, -0.1175, 0.3346, -0.2451, -0.5008, 0.5908, -0.2451, -0.1175, 0.1175, -0.2451, 0.5908, 0.5008, -0.2451, 0.3346, 0.1175, -0.2451, 0.5908, -0.5908, -0.2451, 0.1175, -0.3346, -0.2451, 0.5008, -0.5908, -0.2451, 0.1175, -0.1175, -0.2451, -0.5908, -0.5008, -0.2451, -0.3346, -0.1175, -0.2451, -0.5908, 0.1175, -0.2451, 0.5908, 0.5908, -0.2451, -0.1175, 0.1175, -0.2451, 0.5908, -0.1175, -0.2451, -0.5908, -0.5908, -0.2451, 0.1175 )
 
 [node name="brize" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="Cube209" type="MeshInstance" parent="."]
 transform = Transform( -0.105078, -0.00566126, -0.0165161, -0.00239088, 0.250114, 0.108896, -0.000410271, -0.00760117, 3.59547, 9.93717, 5.99577, -33.9631 )
@@ -2894,6 +2898,7 @@ shape = SubResource( 177 )
 [node name="Cube182" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 22.4021, 4.56272, 4.80703 )
 mesh = SubResource( 28 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube182"]
 
@@ -2903,6 +2908,7 @@ shape = SubResource( 178 )
 [node name="Cube181" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 21.7219, 4.56272, 4.80823 )
 mesh = SubResource( 29 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube181"]
 
@@ -2912,6 +2918,7 @@ shape = SubResource( 179 )
 [node name="Cube180" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 21.0643, 4.56272, 4.80939 )
 mesh = SubResource( 30 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube180"]
 
@@ -2921,6 +2928,7 @@ shape = SubResource( 180 )
 [node name="Cube179" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 20.4521, 4.56272, 4.81047 )
 mesh = SubResource( 31 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube179"]
 
@@ -2930,6 +2938,7 @@ shape = SubResource( 181 )
 [node name="Cube178" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 19.7946, 4.56272, 4.81163 )
 mesh = SubResource( 32 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube178"]
 
@@ -2939,6 +2948,7 @@ shape = SubResource( 182 )
 [node name="Cube177" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 19.137, 4.56272, 4.81279 )
 mesh = SubResource( 33 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube177"]
 
@@ -2948,6 +2958,7 @@ shape = SubResource( 183 )
 [node name="Cube176" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 18.4795, 4.56272, 4.81395 )
 mesh = SubResource( 34 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube176"]
 
@@ -2957,6 +2968,7 @@ shape = SubResource( 184 )
 [node name="Cube175" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 17.8673, 4.56272, 4.81503 )
 mesh = SubResource( 35 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube175"]
 
@@ -2966,6 +2978,7 @@ shape = SubResource( 185 )
 [node name="Cube174" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 17.2097, 4.56272, 4.81619 )
 mesh = SubResource( 36 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube174"]
 
@@ -2975,6 +2988,7 @@ shape = SubResource( 186 )
 [node name="Cube173" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 16.5329, 4.56272, 4.81739 )
 mesh = SubResource( 37 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube173"]
 
@@ -2984,6 +2998,7 @@ shape = SubResource( 187 )
 [node name="Cube172" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 15.8754, 4.56272, 4.81855 )
 mesh = SubResource( 38 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube172"]
 
@@ -2993,6 +3008,7 @@ shape = SubResource( 188 )
 [node name="Cube171" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 15.2632, 4.56272, 4.81963 )
 mesh = SubResource( 39 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube171"]
 
@@ -3002,6 +3018,7 @@ shape = SubResource( 189 )
 [node name="Cube170" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 14.6056, 4.56272, 4.82079 )
 mesh = SubResource( 40 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube170"]
 
@@ -3011,6 +3028,7 @@ shape = SubResource( 190 )
 [node name="Cube169" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 13.9481, 4.56272, 4.82195 )
 mesh = SubResource( 41 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube169"]
 
@@ -3020,6 +3038,7 @@ shape = SubResource( 191 )
 [node name="Cube168" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 13.2905, 4.56272, 4.82311 )
 mesh = SubResource( 42 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube168"]
 
@@ -3029,6 +3048,7 @@ shape = SubResource( 192 )
 [node name="Cube167" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 12.6783, 4.56272, 4.82419 )
 mesh = SubResource( 43 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube167"]
 
@@ -3038,6 +3058,7 @@ shape = SubResource( 193 )
 [node name="Cube166" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 12.0208, 4.56272, 4.82535 )
 mesh = SubResource( 44 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube166"]
 
@@ -3047,6 +3068,7 @@ shape = SubResource( 194 )
 [node name="Cube165" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 11.3406, 4.56272, 4.82655 )
 mesh = SubResource( 45 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube165"]
 
@@ -3056,6 +3078,7 @@ shape = SubResource( 195 )
 [node name="Cube164" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 10.683, 4.56272, 4.82771 )
 mesh = SubResource( 46 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube164"]
 
@@ -3065,6 +3088,7 @@ shape = SubResource( 196 )
 [node name="Cube163" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 10.0708, 4.56272, 4.8288 )
 mesh = SubResource( 47 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube163"]
 
@@ -3074,6 +3098,7 @@ shape = SubResource( 197 )
 [node name="Cube162" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 9.41329, 4.56272, 4.82996 )
 mesh = SubResource( 48 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube162"]
 
@@ -3083,6 +3108,7 @@ shape = SubResource( 198 )
 [node name="Cube161" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 8.75574, 4.56272, 4.83112 )
 mesh = SubResource( 49 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube161"]
 
@@ -3092,6 +3118,7 @@ shape = SubResource( 199 )
 [node name="Cube160" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 8.0982, 4.56272, 4.83228 )
 mesh = SubResource( 50 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube160"]
 
@@ -3101,6 +3128,7 @@ shape = SubResource( 200 )
 [node name="Cube159" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 7.486, 4.56272, 4.83336 )
 mesh = SubResource( 51 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube159"]
 
@@ -3110,6 +3138,7 @@ shape = SubResource( 201 )
 [node name="Cube158" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 6.82846, 4.56272, 4.83452 )
 mesh = SubResource( 52 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube158"]
 
@@ -3119,6 +3148,7 @@ shape = SubResource( 202 )
 [node name="Cube157" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 5.92594, 4.56272, 4.83611 )
 mesh = SubResource( 53 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube157"]
 
@@ -3128,6 +3158,7 @@ shape = SubResource( 203 )
 [node name="Cube156" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 5.26839, 4.56272, 4.83727 )
 mesh = SubResource( 54 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube156"]
 
@@ -3137,6 +3168,7 @@ shape = SubResource( 204 )
 [node name="Cube155" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 4.6562, 4.56272, 4.83835 )
 mesh = SubResource( 55 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube155"]
 
@@ -3146,6 +3178,7 @@ shape = SubResource( 205 )
 [node name="Cube154" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 3.99865, 4.56272, 4.83951 )
 mesh = SubResource( 56 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube154"]
 
@@ -3155,6 +3188,7 @@ shape = SubResource( 206 )
 [node name="Cube153" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 3.34111, 4.56272, 4.84067 )
 mesh = SubResource( 57 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube153"]
 
@@ -3164,6 +3198,7 @@ shape = SubResource( 207 )
 [node name="Cube152" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 2.68356, 4.56272, 4.84184 )
 mesh = SubResource( 58 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube152"]
 
@@ -3173,6 +3208,7 @@ shape = SubResource( 208 )
 [node name="Cube151" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 2.07137, 4.56272, 4.84292 )
 mesh = SubResource( 59 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube151"]
 
@@ -3182,6 +3218,7 @@ shape = SubResource( 209 )
 [node name="Cube150" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 1.41382, 4.56272, 4.84408 )
 mesh = SubResource( 60 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube150"]
 
@@ -3191,6 +3228,7 @@ shape = SubResource( 210 )
 [node name="Cube149" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 0.733601, 4.56272, 4.84528 )
 mesh = SubResource( 61 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube149"]
 
@@ -3200,6 +3238,7 @@ shape = SubResource( 211 )
 [node name="Cube148" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, 0.0760584, 4.56272, 4.84644 )
 mesh = SubResource( 62 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube148"]
 
@@ -3209,6 +3248,7 @@ shape = SubResource( 212 )
 [node name="Cube147" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -0.536139, 4.56272, 4.84752 )
 mesh = SubResource( 63 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube147"]
 
@@ -3218,6 +3258,7 @@ shape = SubResource( 213 )
 [node name="Cube146" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -1.19369, 4.56272, 4.84868 )
 mesh = SubResource( 64 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube146"]
 
@@ -3227,6 +3268,7 @@ shape = SubResource( 214 )
 [node name="Cube145" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -1.85123, 4.56272, 4.84984 )
 mesh = SubResource( 65 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube145"]
 
@@ -3245,6 +3287,7 @@ shape = SubResource( 216 )
 [node name="Cube143" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -3.12097, 4.56272, 4.85208 )
 mesh = SubResource( 67 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube143"]
 
@@ -3254,6 +3297,7 @@ shape = SubResource( 217 )
 [node name="Cube142" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -3.77852, 4.56272, 4.85324 )
 mesh = SubResource( 68 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube142"]
 
@@ -3263,6 +3307,7 @@ shape = SubResource( 218 )
 [node name="Cube141" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -4.55488, 4.56272, 4.85461 )
 mesh = SubResource( 69 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube141"]
 
@@ -3272,6 +3317,7 @@ shape = SubResource( 219 )
 [node name="Cube140" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -5.21242, 4.56272, 4.85577 )
 mesh = SubResource( 70 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube140"]
 
@@ -3281,6 +3327,7 @@ shape = SubResource( 220 )
 [node name="Cube139" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -5.82462, 4.56272, 4.85686 )
 mesh = SubResource( 71 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube139"]
 
@@ -3290,6 +3337,7 @@ shape = SubResource( 221 )
 [node name="Cube138" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -6.48216, 4.56272, 4.85802 )
 mesh = SubResource( 72 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube138"]
 
@@ -3299,6 +3347,7 @@ shape = SubResource( 222 )
 [node name="Cube137" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -7.13971, 4.56272, 4.85918 )
 mesh = SubResource( 73 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube137"]
 
@@ -3308,6 +3357,7 @@ shape = SubResource( 223 )
 [node name="Cube136" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -7.79725, 4.56272, 4.86034 )
 mesh = SubResource( 74 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube136"]
 
@@ -3317,6 +3367,7 @@ shape = SubResource( 224 )
 [node name="Cube135" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -8.40944, 4.56272, 4.86142 )
 mesh = SubResource( 75 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube135"]
 
@@ -3326,6 +3377,7 @@ shape = SubResource( 225 )
 [node name="Cube134" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -9.06699, 4.56272, 4.86258 )
 mesh = SubResource( 76 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube134"]
 
@@ -3335,6 +3387,7 @@ shape = SubResource( 226 )
 [node name="Cube133" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -9.74721, 4.56272, 4.86378 )
 mesh = SubResource( 77 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube133"]
 
@@ -3344,6 +3397,7 @@ shape = SubResource( 227 )
 [node name="Cube132" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -10.4048, 4.56272, 4.86494 )
 mesh = SubResource( 78 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube132"]
 
@@ -3353,6 +3407,7 @@ shape = SubResource( 228 )
 [node name="Cube131" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -11.017, 4.56272, 4.86602 )
 mesh = SubResource( 79 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube131"]
 
@@ -3362,6 +3417,7 @@ shape = SubResource( 229 )
 [node name="Cube130" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -11.6745, 4.56272, 4.86718 )
 mesh = SubResource( 80 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube130"]
 
@@ -3371,6 +3427,7 @@ shape = SubResource( 230 )
 [node name="Cube129" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -12.332, 4.56272, 4.86834 )
 mesh = SubResource( 81 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube129"]
 
@@ -3380,6 +3437,7 @@ shape = SubResource( 231 )
 [node name="Cube128" type="MeshInstance" parent="."]
 transform = Transform( 0.00868442, 0, -0.251232, 0, 0.132843, 0, 4.92031, 0, 0.000443428, -12.9896, 4.56272, 4.8695 )
 mesh = SubResource( 82 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube128"]
 

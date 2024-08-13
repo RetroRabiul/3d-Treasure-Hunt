@@ -6,6 +6,8 @@ var Speed_Time = 30
 
 var Power_time = 30
 
+var time = 0
+
 func _ready():
 	GlobalSignal.connect("can_use" , self, "_can_use")
 	GlobalSignal.connect("collected_key" , self, "_collected_key")
@@ -15,8 +17,7 @@ func _ready():
 	GlobalSignal.connect("speed" , self, "_speed")
 	GlobalSignal.connect("sign_text", self, "_sign_text")
 	GlobalSignal.connect("sign_hide", self, "_sign_hide")
-
-	
+	$TimeLable.text = "Time : " + str(time)
 
 
 func _sign_hide():
@@ -27,16 +28,15 @@ func _sign_text(text):
 	$sign_text.visible = true
 
 
-
 func _speed():
 	$speed_timer.start()
 	$speed_label.text = "Speed_Time : "+str(Speed_Time)
 
 
-
 func _process(delta):
 	$Jump_Label.text = "J.P.T : "+str(Power_time)
 	$speed_label.text = "Speed_Time : "+str(Speed_Time)
+	$TimeLable.text = "Time : " + str (time)
 
 func _locked_door():
 	$"%UseLabel".text = "LOCKED"
@@ -80,3 +80,7 @@ func _on_speed_timer_timeout():
 	if Speed_Time == 0:
 		$time_end.play()
 		$speed_timer.stop()
+
+
+func _on_Timer_timeout():
+	time += 1
