@@ -13,4 +13,5 @@ func _ready():
 func _on_Collectkey_body_entered(body):
 	if body.is_in_group("player"):
 		GlobalVars.key_collected = true
+		GlobalSignal.emit_signal("got_key")
 		queue_free()

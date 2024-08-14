@@ -23,4 +23,5 @@ signal sign_hide()
 
 signal use_treasure()
 
-
+signal got_key()
+signal lost_key()

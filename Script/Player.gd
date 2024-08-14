@@ -127,7 +127,7 @@ func _on_jumpTimer_timeout():
 	GlobalSignal.emit_signal("reset_jump")
 	$time_end.play()
 
-
-func _on_Restart_body_entered(body):
-	if body.is_in_group("player"):
-		get_tree().change_scene("res://Scene/Game_Scene.tscn")
+#
+#func _on_Restart_body_entered(body):
+#	if body.is_in_group("player"):
+#		get_tree().change_scene("res://Scene/Game_Scene.tscn")

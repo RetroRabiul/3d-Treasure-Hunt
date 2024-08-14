@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Script/Ui.gd" type="Script" id=1]
 [ext_resource path="res://font/Comfortaa-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Audio/Random.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/key_icon.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
@@ -68,6 +69,13 @@ valign = 1
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="KeyIcon" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 976, 56 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
 
 [connection signal="timeout" from="Jump_Timer" to="." method="_on_Jump_Timer_timeout"]
 [connection signal="timeout" from="speed_timer" to="." method="_on_speed_timer_timeout"]

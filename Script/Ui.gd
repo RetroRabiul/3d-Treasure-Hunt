@@ -9,6 +9,7 @@ var Power_time = 30
 var time = 0
 
 func _ready():
+	$KeyIcon.visible = false
 	GlobalSignal.connect("can_use" , self, "_can_use")
 	GlobalSignal.connect("collected_key" , self, "_collected_key")
 	GlobalSignal.connect("locked_door" , self, "_locked_door")
@@ -17,7 +18,16 @@ func _ready():
 	GlobalSignal.connect("speed" , self, "_speed")
 	GlobalSignal.connect("sign_text", self, "_sign_text")
 	GlobalSignal.connect("sign_hide", self, "_sign_hide")
+	GlobalSignal.connect("got_key", self, "_got_key")
+	GlobalSignal.connect("lost_key", self, "_lost_key")
 	$TimeLable.text = "Time : " + str(time)
+
+func _lost_key():
+	$KeyIcon.visible = false
+
+
+func _got_key():
+	$KeyIcon.visible = true
 
 
 func _sign_hide():
@@ -37,6 +47,10 @@ func _process(delta):
 	$Jump_Label.text = "J.P.T : "+str(Power_time)
 	$speed_label.text = "Speed_Time : "+str(Speed_Time)
 	$TimeLable.text = "Time : " + str (time)
+#	if GlobalVars.key_collected:
+#		$KeyIcon.visible = true
+#	else:
+#		$KeyIcon.visible = false
 
 func _locked_door():
 	$"%sign_text".text = "LOCKED"
