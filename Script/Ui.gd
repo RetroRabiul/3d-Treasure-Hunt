@@ -6,8 +6,6 @@ var Speed_Time = 30
 
 var Power_time = 30
 
-var time = 0
-
 func _ready():
 	$KeyIcon.visible = false
 	GlobalSignal.connect("can_use" , self, "_can_use")
@@ -20,7 +18,7 @@ func _ready():
 	GlobalSignal.connect("sign_hide", self, "_sign_hide")
 	GlobalSignal.connect("got_key", self, "_got_key")
 	GlobalSignal.connect("lost_key", self, "_lost_key")
-	$TimeLable.text = "Time : " + str(time)
+	$TimeLable.text = "Time : " + str(GlobalVars.time)
 
 func _lost_key():
 	$KeyIcon.visible = false
@@ -46,7 +44,7 @@ func _speed():
 func _process(delta):
 	$Jump_Label.text = "J.P.T : "+str(Power_time)
 	$speed_label.text = "Speed_Time : "+str(Speed_Time)
-	$TimeLable.text = "Time : " + str (time)
+	$TimeLable.text = "Time : " + str (GlobalVars.time)
 #	if GlobalVars.key_collected:
 #		$KeyIcon.visible = true
 #	else:
@@ -98,4 +96,4 @@ func _on_speed_timer_timeout():
 
 func _on_Timer_timeout():
 	if GlobalVars.tresure_opened == false:
-		time += 1
+		GlobalVars.time += 1

@@ -8,10 +8,16 @@ func _ready():
 
 func _use_treasure():
 	if player_near:
+		GlobalSignal.emit_signal("player_time")
 		print("teasure_opened")
 		$AnimationPlayer.play("open")
 		$Lock.visible = false
-		GlobalVars.tresure_opened = true
+		yield($AnimationPlayer, "animation_finished")
+		call_deferred("_change_scene")
+		
+
+func _change_scene():
+	get_tree().change_scene("res://Scene/GameOver.tscn")
 
 
 func _on_Area_body_entered(body):

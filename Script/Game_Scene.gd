@@ -15,7 +15,6 @@ func _key_random_pos():
 	var key_pos = $"%Key_position".get_child(random_pos)
 	$"%key".global_position = key_pos.global_position
 	
-	
 
 
 func _on_Restart_body_entered(body):

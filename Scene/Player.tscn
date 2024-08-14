@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
 [ext_resource path="res://Audio/Powerup3.wav" type="AudioStream" id=2]
 [ext_resource path="res://Audio/Powerup2.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio/Powerup.wav" type="AudioStream" id=4]
 [ext_resource path="res://Audio/Random.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/Running.mp3" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.938049
@@ -14,6 +15,7 @@ height = 0.535434
 
 [node name="Player" type="KinematicBody" groups=["player"]]
 script = ExtResource( 1 )
+speed = 100
 
 [node name="Player_Collision" type="CollisionShape" parent="."]
 transform = Transform( 1.08018, 0, -5.42628e-08, -4.72161e-08, 1.91069e-15, -1.24139, 0, 1, 2.3719e-15, 0, 0, 0 )
@@ -49,6 +51,7 @@ stream = ExtResource( 4 )
 stream = ExtResource( 5 )
 
 [node name="walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 volume_db = -5.0
 pitch_scale = 1.14
 
