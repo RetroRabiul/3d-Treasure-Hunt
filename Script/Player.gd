@@ -103,6 +103,7 @@ func _input(event):
 		if GlobalVars.key_collected:
 			print("key_collected")
 			GlobalSignal.emit_signal("use_treasure")
+#			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	
 	if Input.is_action_just_pressed("ui_cancel"):

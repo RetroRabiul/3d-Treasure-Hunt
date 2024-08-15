@@ -14,6 +14,7 @@ func _ready():
 
 func _player_time():
 	$"%Time".text = "Your Time : " + str(GlobalVars.time)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print(GlobalVars.time)
 
 
