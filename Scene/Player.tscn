@@ -15,7 +15,6 @@ height = 0.535434
 
 [node name="Player" type="KinematicBody" groups=["player"]]
 script = ExtResource( 1 )
-speed = 100
 
 [node name="Player_Collision" type="CollisionShape" parent="."]
 transform = Transform( 1.08018, 0, -5.42628e-08, -4.72161e-08, 1.91069e-15, -1.24139, 0, 1, 2.3719e-15, 0, 0, 0 )
