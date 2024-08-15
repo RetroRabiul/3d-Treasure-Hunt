@@ -39,7 +39,7 @@ script = ExtResource( 14 )
 [node name="greenland" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 327, 54, 55 )
+transform = Transform( 1.76777, 0, -1.76777, 0, 2.5, 0, 1.76777, 0, 1.76777, 327, 54, 55 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 243, 477 )

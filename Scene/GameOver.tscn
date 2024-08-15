@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://font/Comfortaa-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Script/GameOver.gd" type="Script" id=2]
@@ -7,25 +7,47 @@
 size = 50
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0.0784314, 1, 1 )
+
 [node name="GameOver" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="color" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.027451, 0.235294, 0, 1 )
 
-[node name="Time" type="Label" parent="ColorRect"]
+[node name="Time" type="Label" parent="color"]
 unique_name_in_owner = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -289.0
-margin_top = -28.5
+margin_top = -70.5
 margin_right = 14.0
-margin_bottom = 28.5
+margin_bottom = -13.5
 custom_fonts/font = SubResource( 1 )
 text = "Your Time : "
+
+[node name="back_button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.0
+margin_top = 29.5
+margin_right = 153.0
+margin_bottom = 92.5
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Main Menu"
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

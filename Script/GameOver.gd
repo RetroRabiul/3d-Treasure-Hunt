@@ -17,7 +17,5 @@ func _player_time():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print(GlobalVars.time)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_back_button_pressed():
+	get_tree().change_scene("res://Scene/main_menu.tscn")
