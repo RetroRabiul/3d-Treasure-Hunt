@@ -23,7 +23,6 @@ export var sensitivity: float = 0.1
 var captured: bool = true
 
 
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	captured = true
@@ -104,9 +103,9 @@ func _input(event):
 			print("key_collected")
 			GlobalSignal.emit_signal("use_treasure")
 #			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	
-	if Input.is_action_just_pressed("ui_cancel"):
+
+
+	if Input.is_action_just_pressed("mouse"):
 		if captured:
 			captured = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

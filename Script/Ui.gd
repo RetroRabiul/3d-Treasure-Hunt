@@ -96,4 +96,8 @@ func _on_speed_timer_timeout():
 
 func _on_Timer_timeout():
 	if GlobalVars.tresure_opened == false:
-		GlobalVars.time += 1
+		if GlobalVars.time == 200:
+			GlobalSignal.emit_signal("long_time")
+			get_tree().change_scene("res://Scene/GameOver.tscn")
+		else:
+			GlobalVars.time += 1

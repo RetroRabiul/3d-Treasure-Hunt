@@ -5,6 +5,7 @@ var rng = RandomNumberGenerator.new()
 
 
 func _ready():
+	GlobalVars.time = 0
 	rng.randomize()
 	_key_random_pos()
 
